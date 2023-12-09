@@ -1,0 +1,13 @@
+- name: install nova (Ubuntu)
+  apt:
+    name:
+      - nova-compute
+      - python3-openstackclient
+    state: present
+    update_cache: yes
+
+- name: start nova
+  service:
+     name: nova-compute
+     state: restarted
+     enabled: yes

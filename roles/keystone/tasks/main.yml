@@ -1,0 +1,5 @@
+- name: install keystone (Ubuntu)
+  apt:
+    name: keystone
+    state: present
+    update_cache: yes
